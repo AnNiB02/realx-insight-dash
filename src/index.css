@@ -2,39 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* RealX Dashboard Design System - Modern, elegant support platform
+All colors MUST be HSL for perfect theme consistency.
 */
 
 @layer base {
   :root {
+    /* Base colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
+    /* Card system */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
+    /* Interactive elements */
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand colors - RealX modern palette */
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 222 47% 30%;
+    --primary-lighter: 222 47% 85%;
 
-    --secondary: 210 40% 96.1%;
+    /* Pastel gradient system */
+    --secondary: 250 60% 88%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent-blue: 220 60% 85%;
+    --accent-purple: 280 60% 85%;
+    --accent-lavender: 260 55% 90%;
 
+    /* Content hierarchy */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    /* Interactive states */
+    --accent: 220 60% 85%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
+    /* Status colors */
+    --success: 140 60% 60%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 90% 65%;
+    --warning-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    /* UI elements */
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--accent-blue)), hsl(var(--accent-purple)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary)));
+    --gradient-flow: linear-gradient(270deg, hsl(var(--accent-blue)), hsl(var(--accent-lavender)), hsl(var(--accent-purple)));
+
+    /* Animations */
+    --shadow-soft: 0 4px 20px -2px hsl(var(--accent-blue) / 0.15);
+    --shadow-hover: 0 8px 30px -2px hsl(var(--accent-purple) / 0.25);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -102,4 +130,102 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+  /* Background animations */
+  .gradient-flow {
+    background: var(--gradient-flow);
+    background-size: 300% 300%;
+    animation: gradientFlow 6s ease infinite;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease-in-out infinite alternate;
+  }
+
+  /* Card components with elegant hover effects */
+  .metric-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .metric-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Chat bubble animations */
+  .chat-bubble {
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slideInBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  /* Demo button with pulse effect */
+  .demo-button {
+    background: hsl(var(--primary));
+    animation: softPulse 3s ease-in-out infinite;
+  }
+
+  .demo-button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Feature section reveals */
+  .feature-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .feature-reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  /* Animation delays for staggered effects */
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
+  .animation-delay-800 { animation-delay: 0.8s; }
+  .animation-delay-1000 { animation-delay: 1.0s; }
+}
+
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBounce {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
 }
