@@ -179,6 +179,16 @@ All colors MUST be HSL for perfect theme consistency.
     box-shadow: var(--shadow-hover);
   }
 
+  /* Search bar glow effect */
+  .search-glow {
+    animation: searchGlow 2s ease-in-out infinite alternate;
+  }
+
+  .search-glow:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px -2px hsl(var(--accent-blue) / 0.3);
+  }
+
   /* Feature section reveals */
   .feature-reveal {
     opacity: 0;
@@ -228,4 +238,9 @@ All colors MUST be HSL for perfect theme consistency.
 @keyframes softPulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.85; }
+}
+
+@keyframes searchGlow {
+  0% { box-shadow: 0 4px 20px -2px hsl(var(--accent-blue) / 0.15); }
+  100% { box-shadow: 0 6px 25px -2px hsl(var(--accent-blue) / 0.25); }
 }
