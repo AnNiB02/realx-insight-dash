@@ -244,3 +244,12 @@ All colors MUST be HSL for perfect theme consistency.
   0% { box-shadow: 0 4px 20px -2px hsl(var(--accent-blue) / 0.15); }
   100% { box-shadow: 0 6px 25px -2px hsl(var(--accent-blue) / 0.25); }
 }
+
+@keyframes breatheAnimation {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-3px); 
+  }
+}

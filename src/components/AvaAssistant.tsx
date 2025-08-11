@@ -17,21 +17,19 @@ const AnimatedAvatar = ({ isTyping, shouldWave }: { isTyping: boolean; shouldWav
 
   return (
     <div className="relative w-20 h-20 mx-auto mb-4">
-      {/* Avatar circle background with breathing animation */}
-      <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full animate-pulse shadow-lg flex items-center justify-center relative overflow-hidden">
-        {/* Face */}
-        <div className={`transform transition-transform duration-300 ${shouldWave ? 'rotate-12' : ''}`}>
-          {/* Eyes */}
-          <div className="flex gap-2 mb-1">
-            <div className={`w-2 h-2 bg-white rounded-full transition-all duration-150 ${isBlinking ? 'h-0.5' : ''}`}></div>
-            <div className={`w-2 h-2 bg-white rounded-full transition-all duration-150 ${isBlinking ? 'h-0.5' : ''}`}></div>
-          </div>
-          {/* Smile */}
-          <div className="w-3 h-1.5 border-b-2 border-white rounded-full"></div>
-        </div>
-        
-        {/* Breathing glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full opacity-50 animate-ping"></div>
+      {/* Robot avatar with breathing animation */}
+      <div className={`transform transition-all duration-300 ${shouldWave ? 'rotate-12' : ''}`}
+           style={{
+             animation: 'breatheAnimation 3s ease-in-out infinite',
+           }}>
+        <img 
+          src="/lovable-uploads/1f519efc-3285-4a28-8772-c54c6a719c89.png"
+          alt="Ava AI Assistant"
+          className="w-20 h-20 object-contain"
+          style={{
+            filter: isBlinking ? 'brightness(0.8)' : 'brightness(1)',
+          }}
+        />
       </div>
       
       {/* Sparkles around avatar */}

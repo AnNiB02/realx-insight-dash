@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { AIChatInterface } from "@/components/AIChatInterface";
 
 export const HeroSection = () => {
   return (
@@ -39,13 +38,14 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* AI Chat Interface */}
+        {/* Visual Elements */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative">
-            <AIChatInterface />
-            
-            {/* Glow effect behind chat */}
-            <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 to-accent-purple/20 blur-3xl -z-10 scale-150"></div>
+          <div className="relative w-96 h-96 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 to-accent-purple/20 blur-3xl animate-pulse"></div>
+            <div className="relative z-10 text-center">
+              <div className="text-8xl mb-4 animate-bounce">🚀</div>
+              <p className="text-muted-foreground text-lg">Your Journey Starts Here</p>
+            </div>
           </div>
         </div>
       </div>
