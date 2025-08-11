@@ -8,38 +8,38 @@ All colors MUST be HSL for perfect theme consistency.
 
 @layer base {
   :root {
-    /* Base colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Minimal theme */
+    --background: 0 0% 97.6%;
+    --foreground: 0 0% 13.3%;
 
     /* Card system */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 13.3%;
 
     /* Interactive elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 13.3%;
 
-    /* Brand colors - RealX modern palette */
-    --primary: 222 47% 11%;
+    /* Brand colors - Minimal palette */
+    --primary: 0 0% 13.3%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 222 47% 30%;
-    --primary-lighter: 222 47% 85%;
+    --primary-light: 0 0% 33.3%;
+    --primary-lighter: 0 0% 90%;
 
-    /* Pastel gradient system */
-    --secondary: 250 60% 88%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --accent-blue: 220 60% 85%;
-    --accent-purple: 280 60% 85%;
-    --accent-lavender: 260 55% 90%;
+    /* Minimal color system */
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 33.3%;
+    --accent-blue: 210 43% 49%;
+    --accent-purple: 210 43% 49%;
+    --accent-lavender: 210 43% 49%;
 
     /* Content hierarchy */
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 33.3%;
 
-    /* Interactive states */
-    --accent: 220 60% 85%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Interactive states - Muted blue accent */
+    --accent: 210 43% 49%;
+    --accent-foreground: 0 0% 100%;
 
     /* Status colors */
     --success: 140 60% 60%;
