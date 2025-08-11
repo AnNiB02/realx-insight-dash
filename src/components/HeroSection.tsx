@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { AIChatInterface } from "@/components/AIChatInterface";
 
 export const HeroSection = () => {
   return (
@@ -6,9 +7,9 @@ export const HeroSection = () => {
       {/* Animated background overlay */}
       <div className="absolute inset-0 gradient-hero opacity-30"></div>
       
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <div className="space-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        {/* Content */}
+        <div className="text-center lg:text-left">
           {/* Main title */}
           <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight">
             Your Support Performance,{" "}
@@ -18,7 +19,7 @@ export const HeroSection = () => {
           </h1>
           
           {/* Hero description */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto lg:mx-0 leading-relaxed mt-6">
             Step into the heart of your customer support operations with{" "}
             <span className="text-primary font-semibold">RealX Dashboard</span>{" "}
             — where clarity meets elegance. Monitor your conversations, track active users, 
@@ -35,6 +36,16 @@ export const HeroSection = () => {
                 Request a Demo
               </Button>
             </a>
+          </div>
+        </div>
+
+        {/* AI Chat Interface */}
+        <div className="flex justify-center lg:justify-end">
+          <div className="relative">
+            <AIChatInterface />
+            
+            {/* Glow effect behind chat */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 to-accent-purple/20 blur-3xl -z-10 scale-150"></div>
           </div>
         </div>
       </div>
