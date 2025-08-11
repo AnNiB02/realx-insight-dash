@@ -27,12 +27,14 @@ export const HeroSection = () => {
           
           {/* CTA Button */}
           <div className="pt-8">
-            <Button 
-              size="lg" 
-              className="demo-button text-lg px-8 py-4 rounded-xl"
-            >
-              Request a Demo
-            </Button>
+            <a href="/demo">
+              <Button 
+                size="lg" 
+                className="demo-button text-lg px-8 py-4 rounded-xl"
+              >
+                Request a Demo
+              </Button>
+            </a>
           </div>
         </div>
       </div>

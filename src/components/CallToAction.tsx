@@ -19,12 +19,14 @@ export const CallToAction = () => {
           </p>
           
           <div className="pt-8">
-            <Button 
-              size="lg" 
-              className="demo-button text-xl px-12 py-6 rounded-xl"
-            >
-              Request a Demo
-            </Button>
+            <a href="/demo">
+              <Button 
+                size="lg" 
+                className="demo-button text-xl px-12 py-6 rounded-xl"
+              >
+                Request a Demo
+              </Button>
+            </a>
           </div>
           
           <p className="text-sm text-muted-foreground mt-6">

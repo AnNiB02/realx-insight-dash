@@ -15,14 +15,17 @@ export const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#features" className="text-muted-foreground hover:text-primary transition-colors">
               Features
             </a>
-            <a href="#dashboard" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#dashboard" className="text-muted-foreground hover:text-primary transition-colors">
               Dashboard
             </a>
-            <a href="#insights" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#insights" className="text-muted-foreground hover:text-primary transition-colors">
               Insights
+            </a>
+            <a href="/demo" className="text-muted-foreground hover:text-primary transition-colors">
+              Live Demo
             </a>
           </nav>
           

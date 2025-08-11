@@ -110,12 +110,14 @@ export const KnowledgeBaseSection = () => {
             Let <span className="text-primary font-semibold">RealX</span> keep your knowledge base one step ahead.
           </p>
           
-          <Button 
-            size="lg" 
-            className="demo-button text-lg px-8 py-4 rounded-xl"
-          >
-            Explore the Knowledge Base
-          </Button>
+          <a href="/demo">
+            <Button 
+              size="lg" 
+              className="demo-button text-lg px-8 py-4 rounded-xl"
+            >
+              Explore the Knowledge Base
+            </Button>
+          </a>
         </div>
       </div>
       
