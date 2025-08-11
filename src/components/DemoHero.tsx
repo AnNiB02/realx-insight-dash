@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Animated3DCharacter } from "./Animated3DCharacter";
+import { AvaAssistant } from "./AvaAssistant";
 
 export const DemoHero = () => {
   const scrollToDemo = () => {
@@ -83,7 +83,7 @@ export const DemoHero = () => {
           </motion.div>
         </motion.div>
         
-        {/* Animated 3D Character */}
+        {/* AI Chat Interface */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -91,9 +91,9 @@ export const DemoHero = () => {
           className="flex justify-center"
         >
           <div className="relative">
-            <Animated3DCharacter />
+            <AvaAssistant />
             
-            {/* Glow effect behind character */}
+            {/* Glow effect behind chat */}
             <div className="absolute inset-0 bg-gradient-to-r from-violet-500/30 to-blue-500/30 blur-3xl -z-10 scale-150"></div>
           </div>
         </motion.div>
