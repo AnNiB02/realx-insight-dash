@@ -8,11 +8,11 @@ All colors MUST be HSL for perfect theme consistency.
 
 @layer base {
   :root {
-    /* Base colors - Minimal theme */
-    --background: 0 0% 97.6%;
+    /* Dashboard Design - Clean SaaS styling */
+    --background: 210 20% 97.3%; /* #f8f9fa light neutral */
     --foreground: 0 0% 13.3%;
 
-    /* Card system */
+    /* Card system - Pure white cards */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 13.3%;
 
@@ -20,34 +20,46 @@ All colors MUST be HSL for perfect theme consistency.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 13.3%;
 
-    /* Brand colors - Minimal palette */
-    --primary: 0 0% 13.3%;
+    /* Brand colors - Muted blue accent system */
+    --primary: 210 43% 49%; /* #3a6ea5 muted blue */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 0 0% 33.3%;
-    --primary-lighter: 0 0% 90%;
+    --primary-light: 210 43% 65%;
+    --primary-lighter: 210 43% 85%;
 
-    /* Minimal color system */
+    /* Secondary system */
     --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 33.3%;
+    --secondary-foreground: 0 0% 40%; /* #666 soft gray */
     --accent-blue: 210 43% 49%;
     --accent-purple: 210 43% 49%;
     --accent-lavender: 210 43% 49%;
 
     /* Content hierarchy */
     --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 33.3%;
+    --muted-foreground: 0 0% 40%; /* #666 soft gray for body text */
 
-    /* Interactive states - Muted blue accent */
+    /* Interactive states */
     --accent: 210 43% 49%;
     --accent-foreground: 0 0% 100%;
 
-    /* Status colors */
+    /* Dashboard status colors - Soft backgrounds */
     --success: 140 60% 60%;
-    --success-foreground: 0 0% 100%;
+    --success-foreground: 140 60% 20%;
+    --success-light: 140 60% 95%; /* #e8f5e9 light green */
+    
     --warning: 45 90% 65%;
-    --warning-foreground: 0 0% 100%;
+    --warning-foreground: 45 90% 25%;
+    --warning-light: 48 95% 92%; /* #fff8e1 light yellow */
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
+    /* Dashboard-specific colors */
+    --active-status: 207 89% 86%; /* #e3f2fd light blue */
+    --active-status-foreground: 207 89% 30%;
+    --resolved-status: var(--success-light);
+    --resolved-status-foreground: var(--success-foreground);
+    --pending-status: var(--warning-light);
+    --pending-status-foreground: var(--warning-foreground);
 
     /* UI elements */
     --border: 214.3 31.8% 91.4%;
@@ -146,7 +158,28 @@ All colors MUST be HSL for perfect theme consistency.
     animation: gradientShift 4s ease-in-out infinite alternate;
   }
 
-  /* Card components with elegant hover effects */
+  /* Dashboard metric cards with clean styling */
+  .dashboard-metric-card {
+    background: hsl(var(--card));
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: var(--transition-smooth);
+    transform: translateY(0);
+  }
+
+  .dashboard-metric-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Count-up animation for numbers */
+  .metric-number {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  /* Card components with elegant hover effects - legacy support */
   .metric-card {
     background: var(--gradient-card);
     box-shadow: var(--shadow-soft);
