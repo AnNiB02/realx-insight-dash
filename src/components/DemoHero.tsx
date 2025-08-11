@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { AIChatInterface } from "./AIChatInterface";
+import { AvaAssistant } from "./AvaAssistant";
 
 export const DemoHero = () => {
   const scrollToDemo = () => {
@@ -91,7 +91,7 @@ export const DemoHero = () => {
           className="flex justify-center"
         >
           <div className="relative">
-            <AIChatInterface />
+            <AvaAssistant />
             
             {/* Glow effect behind chat */}
             <div className="absolute inset-0 bg-gradient-to-r from-violet-500/30 to-blue-500/30 blur-3xl -z-10 scale-150"></div>
