@@ -1,23 +1,21 @@
-import { Header } from "@/components/Header";
-import { HeroSection } from "@/components/HeroSection";
-import { MetricsShowcase } from "@/components/MetricsShowcase";
-
-import { GrowthInsights } from "@/components/GrowthInsights";
-import { KnowledgeBaseSection } from "@/components/KnowledgeBaseSection";
-import { DashboardPreview } from "@/components/DashboardPreview";
-import { CallToAction } from "@/components/CallToAction";
+import { MinimalHeader } from "@/components/MinimalHeader";
+import { Footer } from "@/components/Footer";
+import { DemoHero } from "@/components/DemoHero";
+import { DashboardDemo } from "@/components/DashboardDemo";
+import { KnowledgeDemo } from "@/components/KnowledgeDemo";
+import { IntegrationSection } from "@/components/IntegrationSection";
+import { DemoClosing } from "@/components/DemoClosing";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <HeroSection />
-      <MetricsShowcase />
-      
-      <KnowledgeBaseSection />
-      <DashboardPreview />
-      <GrowthInsights />
-      <CallToAction />
+      <MinimalHeader />
+      <DemoHero />
+      <DashboardDemo />
+      <KnowledgeDemo />
+      <IntegrationSection />
+      <DemoClosing />
+      <Footer />
     </div>
   );
 };
