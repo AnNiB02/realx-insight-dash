@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Animated3DCharacter } from "./Animated3DCharacter";
 
 export const DemoHero = () => {
   const scrollToDemo = () => {
@@ -11,10 +10,9 @@ export const DemoHero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-blue-600 opacity-90"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-800 via-transparent to-transparent"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-secondary/5"></div>
       
       {/* Floating particles */}
       <div className="absolute inset-0">
@@ -39,19 +37,19 @@ export const DemoHero = () => {
         ))}
       </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Content */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center lg:text-left"
+          className="text-center"
         >
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            className="text-5xl lg:text-7xl font-bold text-foreground leading-tight mb-6"
           >
             Your Support Operations,{" "}
             <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
@@ -63,7 +61,7 @@ export const DemoHero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed"
+            className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed"
           >
             From real-time conversations to a powerful knowledge base — all in one elegant dashboard.
           </motion.p>
@@ -76,26 +74,11 @@ export const DemoHero = () => {
             <Button 
               size="lg"
               onClick={scrollToDemo}
-              className="bg-white text-purple-700 hover:bg-white/90 text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               See It In Action
             </Button>
           </motion.div>
-        </motion.div>
-        
-        {/* Animated 3D Character */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="flex justify-center"
-        >
-          <div className="relative">
-            <Animated3DCharacter />
-            
-            {/* Glow effect behind character */}
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-500/30 to-blue-500/30 blur-3xl -z-10 scale-150"></div>
-          </div>
         </motion.div>
       </div>
     </section>

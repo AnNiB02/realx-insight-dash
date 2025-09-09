@@ -41,7 +41,7 @@ export const DashboardDemo = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="dashboard-demo" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section id="dashboard-demo" className="py-20 bg-background relative overflow-hidden">
       {/* Subtle pattern background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

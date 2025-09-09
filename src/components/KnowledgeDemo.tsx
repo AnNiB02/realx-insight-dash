@@ -15,7 +15,7 @@ export const KnowledgeDemo = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+    <section className="py-20 bg-muted/30 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}

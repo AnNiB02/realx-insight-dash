@@ -13,10 +13,9 @@ export const IntegrationSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Glassmorphism background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-blue-600 to-cyan-500"></div>
-      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+    <section className="py-20 relative overflow-hidden bg-background">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-secondary/5"></div>
       
       {/* Floating orbs */}
       <div className="absolute inset-0">
@@ -49,10 +48,10 @@ export const IntegrationSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Seamless Integration
           </h2>
-          <p className="text-xl text-white/90 mb-16 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto">
             All your support tools working together in perfect harmony
           </p>
         </motion.div>
@@ -71,15 +70,15 @@ export const IntegrationSection = () => {
               }}
               className="group"
             >
-              <div className="bg-white/20 backdrop-blur-md rounded-2xl p-8 border border-white/30 hover:bg-white/30 transition-all duration-300 shadow-xl">
+              <div className="bg-card/50 backdrop-blur-md rounded-2xl p-8 border border-border hover:bg-card/70 transition-all duration-300 shadow-xl">
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   className="text-5xl mb-4"
                 >
                   {integration.icon}
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-3">{integration.title}</h3>
-                <p className="text-white/80 text-sm">{integration.desc}</p>
+                <h3 className="text-xl font-bold text-foreground mb-3">{integration.title}</h3>
+                <p className="text-muted-foreground text-sm">{integration.desc}</p>
                 
                 {/* Connecting lines (visible on hover) */}
                 <motion.div
@@ -87,7 +86,7 @@ export const IntegrationSection = () => {
                   whileHover={{ opacity: 1, scale: 1 }}
                   className="absolute inset-0 pointer-events-none"
                 >
-                  <div className="absolute top-1/2 left-full w-8 h-0.5 bg-white/50 transform -translate-y-1/2 hidden lg:block"></div>
+                  <div className="absolute top-1/2 left-full w-8 h-0.5 bg-border transform -translate-y-1/2 hidden lg:block"></div>
                 </motion.div>
               </div>
             </motion.div>

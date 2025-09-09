@@ -7,7 +7,7 @@ export const DemoClosing = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
+    <section className="py-24 bg-muted/30 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {[...Array(30)].map((_, i) => (
@@ -43,7 +43,7 @@ export const DemoClosing = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl lg:text-6xl font-bold text-white leading-tight"
+            className="text-4xl lg:text-6xl font-bold text-foreground leading-tight"
           >
             Bring clarity and elegance to your{" "}
             <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">
@@ -55,7 +55,7 @@ export const DemoClosing = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-white/90 max-w-3xl mx-auto"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto"
           >
             Experience the future of support management with RealX Dashboard
           </motion.p>
@@ -68,7 +68,7 @@ export const DemoClosing = () => {
           >
             <Button 
               size="lg"
-              className="relative group bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 text-xl px-12 py-6 rounded-2xl transition-all duration-500 overflow-hidden"
+              className="relative group bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-12 py-6 rounded-2xl transition-all duration-500 overflow-hidden"
             >
               {/* Glowing border animation */}
               <motion.div
@@ -107,7 +107,7 @@ export const DemoClosing = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 1 }}
-            className="text-sm text-white/60 pt-6"
+            className="text-sm text-muted-foreground pt-6"
           >
             Join thousands of support teams already transforming with RealX
           </motion.p>
